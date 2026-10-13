@@ -1,0 +1,30 @@
+a {
+  color: purple;
+}
+
+.main-link {
+  color: green;
+}
+
+/* квадрат у останньому вкладеному списку */
+.berries {
+  list-style-type: square;
+}
+
+/* піктограма у другому вкладеному списку */
+.veg {
+  list-style-image: url("check.png");
+}
+
+/* прибрати маркери у вкладених списках (комбінатор нащадків, 3 теги) */
+ul li ul {
+  list-style: none;
+}
+
+.berries a {
+  text-decoration: none;
+}
+
+ol {
+  list-style-position: inside;
+}
