@@ -1,0 +1,48 @@
+/* теги */
+body {
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+}
+h1 {
+  color: red;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  font-style: italic;
+}
+p {
+  text-align: center;
+  margin: 4px 0;
+}
+b {
+  font-size: 20px;
+}
+hr {
+  width: 60%;
+  height: 5px;
+  border: none;
+  background-color: green;
+  margin: 20px auto;
+}
+
+/* класи */
+.small {
+  font-size: 15px;
+}
+.underline {
+  text-decoration: underline;
+}
+.strike {
+  text-decoration: line-through;
+}
+.highlight {
+  background-color: yellow;
+}
+
+/* ідентифікатор */
+#footer {
+  font-family: "Courier New", monospace;
+  font-style: italic;
+  font-size: 16px;
+}
