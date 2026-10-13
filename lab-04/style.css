@@ -1,0 +1,49 @@
+/* 2. універсальний селектор */
+* {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+/* 3. селектори тегів */
+p {
+  color: green;
+  text-align: center;
+}
+div {
+  text-align: justify;
+}
+
+/* 4. клас для 1-го і 3-го абзаців */
+.red {
+  color: red;
+}
+
+/* 5. заборона перенесення рядка (1-й абзац) */
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* 6. ідентифікатор (2-й абзац) */
+#special {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* 7. тінь: 2-й абзац і 2-й div */
+.shadow {
+  text-shadow: 5px -5px 3px #ff6666;
+}
+
+/* 8. 1-й div */
+.strike {
+  text-decoration: line-through;
+  text-transform: uppercase;
+  text-indent: 50px;
+}
+
+/* 9. 2-й div */
+.spacing {
+  letter-spacing: 30px;
+  word-spacing: 50px;
+}
