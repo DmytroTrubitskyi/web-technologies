@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 5 - Box-sizing, Overflow, Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="demo-section">
+        <h2 class="heading-secondary">1. Демонстрація box-sizing</h2>
+        <div class="box-content-mode">
+            <strong>Content-box:</strong><br>
+            width: 300px + padding: 40px + border: 10px = <strong>350px</strong>
+        </div>
+        <div class="box-border-mode">
+            <strong>Border-box:</strong><br>
+            Загальна ширина = <strong>300px</strong> (відступи та рамка всередині)
+        </div>
+    </section>
+
+    <section class="demo-section">
+        <h2 class="heading-secondary">2. Демонстрація overflow</h2>
+        
+        <div class="scroll-container overflow-visible">
+            <strong>overflow: visible</strong><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </div>
+
+        <div class="scroll-container overflow-hidden">
+            <strong>overflow: hidden</strong><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </div>
+
+        <div class="scroll-container overflow-scroll">
+            <strong>overflow: scroll</strong><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </div>
+
+        <div class="scroll-container overflow-auto">
+            <strong>overflow: auto</strong><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </div>
+    </section>
+
+    <section class="demo-section">
+        <h2 class="heading-secondary">3. Демонстрація display</h2>
+        <ul class="navigation-list">
+            <li class="navigation-item"><a href="#" class="navigation-link">Головна</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-link">Про нас</a></li>
+            <li class="navigation-item item-hidden"><a href="#" class="navigation-link">Прихований пункт</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-link">Послуги</a></li>
+            <li class="navigation-item"><a href="#" class="navigation-link">Контакти</a></li>
+        </ul>
+    </section>
+
+</body>
+</html>

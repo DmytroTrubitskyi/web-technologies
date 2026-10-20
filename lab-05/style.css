@@ -1,0 +1,417 @@
+/* Завдання 1 */
+.card-container {
+    background-color: rgb(255, 165, 0);
+    width: 500px;
+    padding: 20px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 20px auto;
+}
+
+.heading-primary {
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.list-primary {
+    background-color: rgb(103, 158, 128);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    list-style: none;
+    margin: 0;
+}
+
+.list-secondary {
+    font-size: 18px;
+    font-style: italic;
+    background-color: rgb(153, 180, 102);
+    padding-left: 0;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.item-primary {
+    list-style: none;
+    margin-bottom: 20px;
+    background-image: url('icons/rule.png'); 
+    background-repeat: no-repeat;
+    background-position: left 5px; 
+    background-size: 28px 28px;
+    padding-left: 40px; 
+}
+
+.item-secondary {
+    margin-bottom: 10px;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px;
+}
+
+.icon-route   { background-image: url('icons/rule.png'); }
+.icon-flight  { background-image: url('icons/airplane_ticket.png'); }
+.icon-hotel   { background-image: url('icons/hotel.png'); }
+.icon-car     { background-image: url('icons/car_rental.png'); }
+.icon-bar     { background-image: url('icons/local_bar.png'); }
+.icon-casino  { background-image: url('icons/casino.png'); }
+.icon-museum  { background-image: url('icons/museum.png'); }
+.icon-festival{ background-image: url('icons/festival.png'); }
+
+.badge-accent,
+.badge-sub {
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.badge-accent {
+    font-size: 20px;
+    font-weight: 700;
+    background-color: rgb(199, 124, 106);
+    margin-bottom: 10px;
+}
+
+.badge-sub {
+    background-color: rgb(218, 106, 32);
+}
+
+.text-bolded { font-weight: bold; }
+.text-italicized { font-style: italic; }
+
+
+/* Завдання 2 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 650px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 12px 18px;
+    text-align: center;
+    border: 1px solid #90e0ef;
+}
+
+th {
+    background-color: #03045e;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+th:first-child {
+    background-color: #023e8a;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #caf0f8;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ade8f4;
+}
+
+tbody td:first-child {
+    text-align: left;
+    font-weight: bold;
+    color: #03045e;
+    background-color: #90e0ef;
+}
+
+
+/* Завдання 3 */
+.form-wrapper {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+.fieldset-box {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.legend-title {
+    font-weight: bold;
+    color: #495057;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.label-text {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.label-inline {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.button-action {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* Завдання 4*/
+.gradient-wrapper {
+    text-align: center;
+    padding: 20px;
+}
+
+.gradient-card {
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.pattern-striped {
+    background: linear-gradient(45deg, #1d3557 50%, #457b9d 50%);
+    background-size: 40px 40px;
+}
+
+.pattern-grid {
+    background: linear-gradient(transparent 50%, rgba(69, 123, 157, 0.5) 50%),
+                linear-gradient(90deg, rgba(69, 123, 157, 0.5) 50%, transparent 50%);
+    background-color: #1d3557;
+    background-size: 30px 30px;
+}
+
+.pattern-radial {
+    background: radial-gradient(circle farthest-corner at 30px 20px, #a8dadc 0%, #457b9d 50%, #1d3557 100%);
+}
+
+.pattern-overlay {
+    background-color: #457b9d;
+    background-image: linear-gradient(to top, rgba(29, 53, 87, 0.8), transparent);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 50%;
+}
+
+
+/* Завдання 5*/
+.demo-section {
+    max-width: 900px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+}
+
+.heading-secondary {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #212529;
+}
+
+.box-content-mode {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2b580c;
+    background-color: #e9ecef;
+    box-sizing: content-box; 
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+}
+
+.box-border-mode {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2b580c;
+    background-color: #e9ecef;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 20px;
+    vertical-align: top;
+}
+
+.scroll-container {
+    width: 180px;
+    max-height: 80px;
+    border: 2px solid #333;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.overflow-visible {
+    overflow: visible;
+    margin-bottom: 70px;
+}
+.overflow-hidden  { overflow: hidden; }
+.overflow-scroll  { overflow: scroll; }
+.overflow-auto    { overflow: auto; }
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #343a40;
+}
+
+.navigation-item {
+    display: inline-block;
+}
+
+.navigation-link {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navigation-link:hover {
+    background-color: #495057;
+}
+
+.item-hidden {
+    display: none;
+    /* ПОЯСНЕННЯ:
+       display: none повністю видаляє елемент із потоку документа (не займає місце на сторінці).
+       На відміну від visibility: hidden (який приховує елемент візуально, але зберігає за ним місце) 
+       або opacity: 0 (який робить елемент повністю прозорим, але він залишається клікабельним та займає місце). */
+}
+
+
+/* Завдання 6 */
+.page-background {
+    background-color: #1b2a41;
+    background-image: url('img/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.layout-wrapper {
+    max-width: 900px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* ПОЯСНЕННЯ min-width:
+       Коли ширина вікна браузера стає вужчою за 320px, контейнер зупиняє подальше зменшення 
+       своєї ширини на позначці 320px, і у вікні браузера з'являється горизонтальна смуга прокручування. */
+}
+
+.content-block {
+    margin-bottom: 30px;
+}
+
+/* Блок Теги */
+.tag-inline {
+    display: inline;
+    width: 200px;  /* НЕ ДІЄ */
+    height: 100px; /* НЕ ДІЄ */
+    background-color: #dee2e6;
+    margin: 5px;
+    padding: 5px;
+    /* ПОЯСНЕННЯ:
+       Для рядкових елементів (display: inline) властивості width та height не застосовуються специфікацією CSS, 
+       оскільки розмір елемента визначається виключно його внутрішнім текстовим вмістом. */
+}
+
+.tag-block {
+    display: block;
+    width: 150px; /* ДІЄ */
+    background-color: #ced4da;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+/* Блок Повторення фону */
+.tile-card {
+    height: 200px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    background-image: url('img/blockk.jpg');
+    padding: 10px;
+}
+
+.repeat-horizontal { background-repeat: repeat-x; }
+.repeat-vertical   { background-repeat: repeat-y; }
+.repeat-spaced     { background-repeat: space; }
+.repeat-rounded    { background-repeat: round; }
+
+/* ПОЯСНЕННЯ Різниці між space та round:
+   - space: повторює зображення стільки разів, скільки повністю поміщається в області. 
+     Якщо залишається вільне місце, воно рівномірно розподіляється як проміжки між фоновими картинками.
+   - round: масштабує (стискає або розтягує) зображення так, щоб в області помістилась ціла кількість рисунків без залишку. */
+
+/* Блок Масштабування */
+.scaling-card {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #333;
+    display: inline-block;
+    margin: 10px;
+    background-image: url('img/blockk.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+    font-weight: bold;
+}
+
+.fit-contain { background-size: contain; }
+.fit-cover   { background-size: cover; }
+
+/* Блок Прокручування фону */
+.scroll-card {
+    max-height: 150px;
+    overflow: auto;
+    border: 1px solid #333;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-image: url('img/blockk.jpg');
+    background-repeat: repeat;
+}
+
+.attachment-scrolled { background-attachment: scroll; }
+.attachment-localized { background-attachment: local; }
+
+/* ПОЯСНЕННЯ background-attachment (scroll vs local):
+   - scroll: фон зафіксований відносно самого блоку-контейнера. При прокручуванні тексту ВСЕРЕДИНІ блоку фон залишається нерухомим.
+   - local: фон зафіксований відносно вмісту (тексту). При прокручуванні тексту всередині блоку фон прокручується разом із текстом. */
