@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 3 - Форма анкети</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-wrapper">
+        <h1 class="heading-primary">Анкета користувача</h1>
+        <form action="#" method="post" class="form-container">
+            
+            <fieldset class="fieldset-box">
+                <legend class="legend-title">Особисті дані</legend>
+                
+                <div class="form-group">
+                    <label for="username" class="label-text">ПІБ:</label>
+                    <input type="text" id="username" name="username" class="input-field" placeholder="Введіть ПІБ">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="label-text">Email:</label>
+                    <input type="email" id="email" name="email" class="input-field" placeholder="example@mail.com">
+                </div>
+
+                <div class="form-group">
+                    <label class="label-text">Стать:</label>
+                    <label class="label-inline"><input type="radio" name="gender" value="male"> Чоловіча</label>
+                    <label class="label-inline"><input type="radio" name="gender" value="female"> Жіноча</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset-box">
+                <legend class="legend-title">В уподобання</legend>
+                
+                <div class="form-group">
+                    <label for="city" class="label-text">Місто проживання:</label>
+                    <select id="city" name="city" class="input-field">
+                        <option value="kyiv">Київ</option>
+                        <option value="lviv">Львів</option>
+                        <option value="chernivtsi">Чернівці</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments" class="label-text">Про себе:</label>
+                    <textarea id="comments" name="comments" class="textarea-field" rows="4"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="button-action">Надіслати</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
