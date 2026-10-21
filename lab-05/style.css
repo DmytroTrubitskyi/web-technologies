@@ -391,10 +391,6 @@ tbody td:first-child {
 
 .item-hidden {
     display: none;
-    /* ПОЯСНЕННЯ:
-       display: none повністю видаляє елемент із потоку документа (не займає місце на сторінці).
-       На відміну від visibility: hidden (який приховує елемент візуально, але зберігає за ним місце) 
-       або opacity: 0 (який робить елемент повністю прозорим, але він залишається клікабельним та займає місце). */
 }
 
 
@@ -417,26 +413,19 @@ tbody td:first-child {
     padding: 20px;
     box-sizing: border-box;
     background-color: rgba(255, 255, 255, 0.9);
-    /* ПОЯСНЕННЯ min-width:
-       Коли ширина вікна браузера стає вужчою за 320px, контейнер зупиняє подальше зменшення 
-       своєї ширини на позначці 320px, і у вікні браузера з'являється горизонтальна смуга прокручування. */
 }
 
 .content-block {
     margin-bottom: 30px;
 }
 
-/* Блок Теги */
 .tag-inline {
     display: inline;
-    width: 200px;  /* НЕ ДІЄ */
-    height: 100px; /* НЕ ДІЄ */
+    width: 200px; 
+    height: 100px; 
     background-color: #dee2e6;
     margin: 5px;
     padding: 5px;
-    /* ПОЯСНЕННЯ:
-       Для рядкових елементів (display: inline) властивості width та height не застосовуються специфікацією CSS, 
-       оскільки розмір елемента визначається виключно його внутрішнім текстовим вмістом. */
 }
 
 .tag-block {
@@ -447,12 +436,11 @@ tbody td:first-child {
     padding: 5px;
 }
 
-/* Блок Повторення фону */
 .tile-card {
     height: 200px;
     margin-bottom: 15px;
     border: 1px solid #000;
-    background-image: url('img/blockk.jpg');
+    background-image: url('icons/ad_units.png');
     padding: 10px;
 }
 
@@ -461,19 +449,13 @@ tbody td:first-child {
 .repeat-spaced     { background-repeat: space; }
 .repeat-rounded    { background-repeat: round; }
 
-/* ПОЯСНЕННЯ Різниці між space та round:
-   - space: повторює зображення стільки разів, скільки повністю поміщається в області. 
-     Якщо залишається вільне місце, воно рівномірно розподіляється як проміжки між фоновими картинками.
-   - round: масштабує (стискає або розтягує) зображення так, щоб в області помістилась ціла кількість рисунків без залишку. */
-
-/* Блок Масштабування */
 .scaling-card {
     width: 300px;
     height: 200px;
     border: 2px solid #333;
     display: inline-block;
     margin: 10px;
-    background-image: url('img/blockk.jpg');
+    background-image: url('icons/ad_units.png');
     background-position: center;
     background-repeat: no-repeat;
     padding: 10px;
@@ -485,20 +467,22 @@ tbody td:first-child {
 .fit-contain { background-size: contain; }
 .fit-cover   { background-size: cover; }
 
-/* Блок Прокручування фону */
 .scroll-card {
-    max-height: 150px;
-    overflow: auto;
-    border: 1px solid #333;
-    margin-bottom: 15px;
-    padding: 10px;
-    background-image: url('img/blockk.jpg');
-    background-repeat: repeat;
+    max-height: 140px;
+    overflow-y: auto;
+    border: 1px solid #023e8a;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-sizing: border-box;
+    
+    background-image: linear-gradient(rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.82)), url('icons/ad_units.png');
+    
+    color: #03045e;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 600;
 }
 
 .attachment-scrolled { background-attachment: scroll; }
 .attachment-localized { background-attachment: local; }
-
-/* ПОЯСНЕННЯ background-attachment (scroll vs local):
-   - scroll: фон зафіксований відносно самого блоку-контейнера. При прокручуванні тексту ВСЕРЕДИНІ блоку фон залишається нерухомим.
-   - local: фон зафіксований відносно вмісту (тексту). При прокручуванні тексту всередині блоку фон прокручується разом із текстом. */
