@@ -2,57 +2,174 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Завдання 3 - Форма анкети</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета користувача</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="form-wrapper">
-        <h1 class="heading-primary">Анкета користувача</h1>
-        <form action="#" method="post" class="form-container">
-            
+        <h1 class="form-title">Анкета користувача</h1>
+
+        <form action="questionnaire.html" method="post" enctype="multipart/form-data" class="form-container">
+
             <fieldset class="fieldset-box">
-                <legend class="legend-title">Особисті дані</legend>
-                
+                <legend class="legend-title">Особисті та облікові дані</legend>
+
                 <div class="form-group">
-                    <label for="username" class="label-text">ПІБ:</label>
-                    <input type="text" id="username" name="username" class="input-field" placeholder="Введіть ПІБ">
+                    <label for="fullname" class="label-text">ПІБ (Обов'язкове поле):</label>
+                    <input type="text" id="fullname" name="fullname" class="input-field" placeholder="Іванов Іван Іванович" required tabindex="1">
                 </div>
 
                 <div class="form-group">
-                    <label for="email" class="label-text">Email:</label>
-                    <input type="email" id="email" name="email" class="input-field" placeholder="example@mail.com">
+                    <label for="email" class="label-text">Електронна пошта (Обов'язкове поле):</label>
+                    <input type="email" id="email" name="email" class="input-field" placeholder="example@domain.com" autocomplete="off" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" title="Введіть коректний email, наприклад: user@mail.com" required tabindex="2">
                 </div>
 
                 <div class="form-group">
-                    <label class="label-text">Стать:</label>
-                    <label class="label-inline"><input type="radio" name="gender" value="male"> Чоловіча</label>
-                    <label class="label-inline"><input type="radio" name="gender" value="female"> Жіноча</label>
+                    <label for="phone" class="label-text">Номер телефону (Формат +380XXXXXXXXX):</label>
+                    <input type="tel" id="phone" name="phone" class="input-field" placeholder="+380991234567" pattern="\+380\d{9}" title="Формат: +380XXXXXXXXX (12 цифр із плюсом)" required tabindex="3">
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="label-text">Пароль (6 символів: 1 велика, 1 мала літера, 1 цифра):</label>
+                    <input type="password" id="password" name="password" class="input-field" placeholder="Приклад: A1b2c3" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6}$" title="Пароль повинен містити рівно 6 символів, щонайменше одну велику літеру, одну малу літеру та одну цифру" required tabindex="4">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthdate" class="label-text">Дата народження:</label>
+                    <input type="date" id="birthdate" name="birthdate" class="input-field" value="2000-01-01" tabindex="5">
                 </div>
             </fieldset>
 
             <fieldset class="fieldset-box">
-                <legend class="legend-title">Уподобання</legend>
-                
+                <legend class="legend-title">Опитування та вподобання</legend>
+
                 <div class="form-group">
-                    <label for="city" class="label-text">Місто проживання:</label>
-                    <select id="city" name="city" class="input-field">
-                        <option value="kyiv">Київ</option>
-                        <option value="lviv">Львів</option>
-                        <option value="chernivtsi">Чернівці</option>
+                    <span class="label-text">Освітньо-кваліфікаційний рівень:</span>
+                    <label class="label-option"><input type="radio" name="education" value="junior_bachelor" class="choice-input" tabindex="6"> Молодший бакалавр</label>
+                    <label class="label-option"><input type="radio" name="education" value="bachelor" class="choice-input" tabindex="7"> Бакалавр</label>
+                    <label class="label-option"><input type="radio" name="education" value="master" class="choice-input" tabindex="8"> Магістр</label>
+                </div>
+
+                <div class="form-group">
+                    <span class="label-text">Форма навчання:</span>
+                    <label class="label-option"><input type="radio" name="study_form" value="fulltime" class="choice-input" tabindex="9"> Денна</label>
+                    <label class="label-option"><input type="radio" name="study_form" value="parttime" class="choice-input" checked tabindex="10"> Заочна</label>
+                    <label class="label-option"><input type="radio" name="study_form" value="distance" class="choice-input" tabindex="11"> Дистанційна</label>
+                </div>
+
+                <div class="form-group">
+                    <span class="label-text">Сфери інтересів у IT:</span>
+                    <label class="label-option"><input type="checkbox" name="interests" value="frontend" class="choice-input" tabindex="12"> Web / Frontend</label>
+                    <label class="label-option"><input type="checkbox" name="interests" value="backend" class="choice-input" tabindex="13"> Backend</label>
+                    <label class="label-option"><input type="checkbox" name="interests" value="qa" class="choice-input" tabindex="14"> QA / Testing</label>
+                    <label class="label-option"><input type="checkbox" name="interests" value="devops" class="choice-input" tabindex="15"> DevOps</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset-box">
+                <legend class="legend-title">Спеціалізований вибір</legend>
+
+                <div class="form-group">
+                    <label for="experience" class="label-text">Досвід роботи в галузі:</label>
+                    <select id="experience" name="experience" class="select-field" tabindex="16">
+                        <option value="none">Без досвіду</option>
+                        <option value="under_1">Менше 1 року</option>
+                        <option value="1_to_3" selected>Від 1 до 3 років</option>
+                        <option value="3_to_5">Від 3 до 5 років</option>
+                        <option value="more_5">Більше 5 років</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="comments" class="label-text">Про себе:</label>
-                    <textarea id="comments" name="comments" class="textarea-field" rows="4"></textarea>
+                    <label for="languages" class="label-text">Мови програмування (множинний вибір):</label>
+                    <select id="languages" name="languages[]" class="select-field select-multiple" multiple size="6" tabindex="17">
+                        <option value="js">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="php">PHP</option>
+                        <option value="csharp">C#</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="city" class="label-text">Обласний центр (групування за регіонами):</label>
+                    <select id="city" name="city" class="select-field" tabindex="18">
+                        <optgroup label="Північ та Центр">
+                            <option value="kyiv">Київ</option>
+                            <option value="vinnytsia">Вінниця</option>
+                            <option value="zhytomyr">Житомир</option>
+                            <option value="kropyvnytskyi">Кропивницький</option>
+                            <option value="poltava">Полтава</option>
+                            <option value="sumy">Суми</option>
+                            <option value="cherkasy">Черкаси</option>
+                            <option value="chernihiv">Чернігів</option>
+                        </optgroup>
+                        <optgroup label="Захід">
+                            <option value="ivano_frankivsk">Івано-Франківськ</option>
+                            <option value="lutsk">Луцьк</option>
+                            <option value="lviv">Львів</option>
+                            <option value="rivne">Рівне</option>
+                            <option value="ternopil">Тернопіль</option>
+                            <option value="uzhhorod">Ужгород</option>
+                            <option value="khmelnytskyi">Хмельницький</option>
+                            <option value="chernivtsi">Чернівці</option>
+                        </optgroup>
+                        <optgroup label="Південь">
+                            <option value="zaporizhzhia">Запоріжжя</option>
+                            <option value="mykolaiv">Миколаїв</option>
+                            <option value="odesa">Одеса</option>
+                            <option value="simferopol">Сімферополь</option>
+                            <option value="kherson">Херсон</option>
+                        </optgroup>
+                        <optgroup label="Схід">
+                            <option value="dnipro">Дніпро</option>
+                            <option value="donetsk">Донецьк</option>
+                            <option value="luhansk">Луганськ</option>
+                            <option value="kharkiv">Харків</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="job_title" class="label-text">Бажана посада (виберіть або введіть свій варіант):</label>
+                    <input type="text" id="job_title" name="job_title" class="input-field" list="job_list" placeholder="Почніть вводити назву посади..." tabindex="19">
+                    <datalist id="job_list">
+                        <option value="Junior HTML/CSS Developer">
+                        <option value="Middle Fullstack Developer">
+                        <option value="Senior Software Engineer">
+                        <option value="UI/UX Designer">
+                        <option value="Project Manager">
+                    </datalist>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset-box">
+                <legend class="legend-title">Файли та коментарі</legend>
+
+                <div class="form-group">
+                    <label for="bio" class="label-text">Додаткова інформація про себе:</label>
+                    <textarea id="bio" name="bio" class="textarea-field" rows="4" placeholder="Розкажіть про свої досягнення або побажання..." tabindex="20"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="audio_files" class="label-text">Завантажте аудіофайли (тільки аудіо, можна декілька):</label>
+                    <input type="file" id="audio_files" name="audio_files[]" class="file-field" accept="audio/*" multiple tabindex="21">
                 </div>
             </fieldset>
 
             <div class="form-actions">
-                <button type="submit" class="button-action">Надіслати</button>
+                <button type="submit" class="button-action button-primary" tabindex="22">Надіслати анкету</button>
+                <button type="reset" class="button-action button-secondary" tabindex="23">Скинути</button>
             </div>
+
         </form>
+
+        <p class="navigation-wrapper">
+            <a href="../index.html" class="navigation-link">Повернутись на головну</a>
+        </p>
     </div>
 
 </body>
