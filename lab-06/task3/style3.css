@@ -307,5 +307,5 @@ body {
 }
 
 .btn-submit:active:after {
-    content: ' ✓';
+    content: ' ✓';     
 }
