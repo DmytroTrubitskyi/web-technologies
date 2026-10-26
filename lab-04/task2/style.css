@@ -1,8 +1,10 @@
-/* теги */
 body {
   font-family: "Times New Roman", serif;
   font-size: 18px;
 }
+
+.recipe {
+
 h1 {
   color: red;
   text-align: center;
@@ -26,7 +28,6 @@ hr {
   margin: 20px auto;
 }
 
-/* класи */
 .small {
   font-size: 15px;
 }
@@ -40,9 +41,9 @@ hr {
   background-color: yellow;
 }
 
-/* ідентифікатор */
 #footer {
   font-family: "Courier New", monospace;
   font-style: italic;
   font-size: 16px;
+}
 }
