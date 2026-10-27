@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 - Завдання 4</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <header class="navbar-horizontal">
+        <ul class="nav-menu-h">
+            <li class="nav-item-h active">
+                <a href="#" class="nav-link-h" title="Home">
+                    <span class="material-icons">home</span>
+                </a>
+            </li>
+
+            <li class="nav-item-h dropdown-h">
+                <a href="#" class="nav-link-h" title="Services">
+                    <span class="material-icons">build</span>
+                </a>
+                <ul class="dropdown-menu-h">
+                    <li><a href="#">Веб-розробка</a></li>
+                    <li class="dropdown-sub-h">
+                        <a href="#">Дизайн <span class="material-icons arrow-right">chevron_right</span></a>
+                        <ul class="dropdown-submenu-h">
+                            <li><a href="#">UI/UX Дизайн</a></li>
+                            <li><a href="#">Графічний дизайн</a></li>
+                            <li><a href="#">Брендинг</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SEO Оптимізація</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item-h">
+                <a href="#" class="nav-link-h" title="Work With Me">
+                    <span class="material-icons">local_cafe</span>
+                </a>
+            </li>
+
+            <li class="nav-item-h nav-right-h">
+                <a href="#" class="nav-link-h" title="Account">
+                    <span class="material-icons">account_circle</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="main-layout">
+        
+        <aside class="navbar-vertical">
+            <div class="nav-v-header">
+                <span class="material-icons logo-icon">menu_open</span>
+                <span class="nav-v-title">Меню</span>
+            </div>
+            
+            <ul class="nav-menu-v">
+                <!-- Рівень 1: Активний -->
+                <li class="nav-item-v active">
+                    <a href="#" class="nav-link-v">
+                        <span class="material-icons">home</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+
+                <li class="nav-item-v dropdown-v">
+                    <a href="#" class="nav-link-v">
+                        <span class="material-icons">info</span>
+                        <span>About</span>
+                        <span class="material-icons arrow-v">chevron_right</span>
+                    </a>
+                    <ul class="dropdown-menu-v">
+                        <li><a href="#">Наша команда</a></li>
+                        <li class="dropdown-sub-v">
+                            <a href="#">Історія <span class="material-icons arrow-v">chevron_right</span></a>
+                            <ul class="dropdown-submenu-v">
+                                <li><a href="#">2020 рік</a></li>
+                                <li><a href="#">2022 рік</a></li>
+                                <li><a href="#">Досягнення</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Вакансії</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item-v dropdown-v">
+                    <a href="#" class="nav-link-v">
+                        <span class="material-icons">local_cafe</span>
+                        <span>Work With Me</span>
+                        <span class="material-icons arrow-v">chevron_right</span>
+                    </a>
+                    <ul class="dropdown-menu-v">
+                        <li><a href="#">Консультація</a></li>
+                        <li><a href="#">Проєкти</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <h1>Завдання 4 — Навігаційні панелі</h1>
+            <p>На цій сторінці реалізовано горизонтальну та вертикальну панелі навігації з використанням іконок Google Fonts Icons.</p>
+            
+            <div class="info-card">
+                <h3>Горизонтальна панель:</h3>
+                <ul>
+                    <li>Фіксована у верхній частині сторінки (<code>position: fixed</code>).</li>
+                    <li>Перший рівень — чиста панель значків (тільки іконки Google Fonts Icons, як на зразку).</li>
+                    <li>Останній пункт меню вирівняно праворуч (<code>float: right</code>).</li>
+                    <li>3 рівні вкладеності випадного меню.</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3>Вертикальна панель:</h3>
+                <ul>
+                    <li>Повна висота екрана (<code>height: calc(100vh - 55px)</code>, <code>position: fixed</code>).</li>
+                    <li>Іконка Google Fonts + Текстова назва (Home, About, Work With Me).</li>
+                    <li>3 рівні вкладеності.</li>
+                </ul>
+            </div>
+
+            <div class="sticky-demo-bar">
+                <span class="material-icons">push_pin</span>
+                <span>Це демонстраційна "Липка" (position: sticky) панель всередині контенту</span>
+            </div>
+
+            <div class="dummy-text" style="margin-top: 20px;">
+                <p>Прокрутіть сторінку донизу, щоб перевірити фіксацію меню та липкий ефект...</p>
+                <div style="height: 800px; background: linear-gradient(to bottom, #ffffff, #eef2f7); margin-top: 20px; border-radius: 8px; padding: 20px;">
+                    <p>Додатковий контент для скролу...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
