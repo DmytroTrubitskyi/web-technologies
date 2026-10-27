@@ -1,0 +1,251 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: Roboto, Arial, sans-serif; 
+    background-color: #f8f9fa; 
+    padding: 30px; 
+}
+
+.page-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-heading {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #202124;
+}
+
+.popup-checkbox,
+.more-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dadce0;
+    border-radius: 8px 8px 0 0;
+}
+
+.top-bar-link {
+    color: #5f6368;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.top-bar-link:hover { 
+    color: #1a73e8; 
+    background-color: #f1f3f4; 
+}
+
+.top-bar-icon-btn, .user-avatar {
+    background: transparent;
+    border: none;
+    color: #5f6368;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #5f6368;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.popup-button:hover { 
+    background-color: #f1f3f4; 
+}
+
+/* Підсвічування кнопки при активному попапі */
+.popup-checkbox:checked ~ .top-bar .popup-button {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.popup-container {
+    position: absolute;
+    top: 120px; /* Зміщено нижче під шапку */
+    right: 70px;
+    width: 320px;
+    max-height: 400px;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    padding: 16px 12px 0 12px;
+    z-index: 9999;
+    overflow: hidden;
+
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.popup-arrow {
+    position: absolute;
+    top: -6px;
+    right: 100px;
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #dadce0;
+    border-left: 1px solid #dadce0;
+    transform: rotate(45deg);
+}
+
+.popup-checkbox:checked ~ .popup-container {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* СІТКА ІКОНОК */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 8px;
+}
+
+.app-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 4px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.app-item:hover { 
+    background-color: #f1f3f4; 
+}
+
+.app-item:focus { 
+    outline: none; 
+    border-color: #1a73e8; 
+    background-color: #e8f0fe; 
+}
+
+.app-icon { 
+    font-size: 38px; 
+    margin-bottom: 6px; 
+}
+
+.app-name { 
+    font-size: 12px; 
+    color: #3c4043; 
+}
+
+.color-calendar { color: #4285f4; }
+.color-mail { color: #ea4335; }
+.color-news { color: #1a73e8; }
+.color-map { color: #34a853; }
+.color-files { color: #fbbc04; }
+.color-contacts { color: #34a853; }
+.color-translate { color: #4285f4; }
+.color-videos { color: #ea4335; }
+.color-search { color: #4285f4; }
+.color-photo { color: #fbbc04; }
+.color-apps { color: #ea4335; }
+.color-doc { color: #4285f4; }
+.color-chat { color: #00897b; }
+.color-classroom { color: #2e7d32; }
+.color-collection { color: #1565c0; }
+.color-mars { color: #d84315; }
+.color-blogs { color: #ef6c00; }
+.color-promos { color: #1565c0; }
+
+.more-button {
+    display: block;
+    text-align: center;
+    background-color: #f8f9fa;
+    color: #5f6368;
+    padding: 10px;
+    margin: 12px -12px 0 -12px;
+    border-top: 1px solid #dadce0;
+    border-radius: 0 0 8px 8px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.more-button:hover { 
+    background-color: #f1f3f4; 
+    color: #202124; 
+}
+
+.more-apps-section { 
+    display: none; 
+}
+
+.apps-divider { 
+    height: 1px; 
+    background-color: #dadce0; 
+    margin: 16px 0; 
+}
+
+.more-footer { 
+    text-align: center; 
+    padding: 20px 0 15px 0; 
+}
+
+.footer-link { 
+    color: #5f6368; 
+    text-decoration: none; 
+    font-size: 13px; 
+}
+
+.more-checkbox:checked ~ .popup-container {
+    max-height: 450px !important;
+    overflow-y: auto !important;
+}
+
+.more-checkbox:checked ~ .popup-container .more-apps-section {
+    display: block !important;
+}
+
+.more-checkbox:checked ~ .popup-container .more-button {
+    display: none !important;
+}
+
+.popup-checkbox:focus ~ .top-bar .popup-button,
+.popup-button:focus,
+.more-button:focus,
+.top-bar-link:focus,
+.top-bar-icon-btn:focus,
+.user-avatar:focus,
+.footer-link:focus {
+    outline: 2px solid #1a73e8;
+    outline-offset: 2px;
+}

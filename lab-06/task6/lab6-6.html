@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 - Завдання 6</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <h1 class="page-heading">Завдання 6 — Спливаюче вікно (Popup)</h1>
+
+        <input type="checkbox" id="popup-toggle" class="popup-checkbox">
+        <input type="checkbox" id="more-toggle" class="more-checkbox">
+
+        <header class="top-bar">
+            <a href="#" class="top-bar-link" tabindex="0">Mail</a>
+            <a href="#" class="top-bar-link" tabindex="0">Images</a>
+
+            <label for="popup-toggle" class="popup-button" tabindex="0" aria-label="Додатки Google" role="button">
+                <span class="material-icons">apps</span>
+            </label>
+
+            <button class="top-bar-icon-btn" tabindex="0" aria-label="Сповіщення">
+                <span class="material-icons">notifications</span>
+            </button>
+            
+            <div class="user-avatar" tabindex="0" role="button" aria-label="Профіль користувача">
+                <span class="material-icons">account_circle</span>
+            </div>
+        </header>
+
+        <div class="popup-container" tabindex="0" aria-label="Контейнер додатків">
+            <div class="popup-arrow"></div>
+            
+            <div class="apps-grid">
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-calendar">event</span>
+                    <span class="app-name">Calendar</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-mail">email</span>
+                    <span class="app-name">Mail</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-news">newspaper</span>
+                    <span class="app-name">News</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-map">place</span>
+                    <span class="app-name">Map</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-files">folder</span>
+                    <span class="app-name">Files</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-contacts">contacts</span>
+                    <span class="app-name">Contacts</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-translate">g_translate</span>
+                    <span class="app-name">Translate</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-videos">subscriptions</span>
+                    <span class="app-name">Videos</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-search">search</span>
+                    <span class="app-name">Search</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-photo">photo_library</span>
+                    <span class="app-name">Photo</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-apps">apps</span>
+                    <span class="app-name">Apps</span>
+                </div>
+                <div class="app-item" tabindex="0" role="button">
+                    <span class="material-icons app-icon color-doc">description</span>
+                    <span class="app-name">Document</span>
+                </div>
+            </div>
+
+            <div class="more-apps-section">
+                <div class="apps-divider"></div>
+                <div class="apps-grid">
+                    <div class="app-item" tabindex="0" role="button">
+                        <span class="material-icons app-icon color-chat">chat</span>
+                        <span class="app-name">Chat</span>
+                    </div>
+                    <div class="app-item" tabindex="0" role="button">
+                        <span class="material-icons app-icon color-classroom">school</span>
+                        <span class="app-name">Classroom</span>
+                    </div>
+                    <div class="app-item" tabindex="0" role="button">
+                        <span class="material-icons app-icon color-collection">bookmark</span>
+                        <span class="app-name">Collection</span>
+                    </div>
+                    <div class="app-item" tabindex="0" role="button">
+                        <span class="material-icons app-icon color-mars">public</span>
+                        <span class="app-name">Mars</span>
+                    </div>
+                    <div class="app-item" tabindex="0" role="button">
+                        <span class="material-icons app-icon color-blogs">rss_feed</span>
+                        <span class="app-name">Blogs</span>
+                    </div>
+                    <div class="app-item" tabindex="0" role="button">
+                        <span class="material-icons app-icon color-promos">campaign</span>
+                        <span class="app-name">Promos</span>
+                    </div>
+                </div>
+                <div class="more-footer">
+                    <a href="#" class="footer-link" tabindex="0">Even more from Kottans</a>
+                </div>
+            </div>
+
+            <label for="more-toggle" class="more-button" tabindex="0" role="button">
+                <span>More</span>
+            </label>
+        </div>
+    </div>
+
+</body>
+</html>
