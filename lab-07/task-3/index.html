@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Завдання 3 — Додаток погоди (Flexbox)</title>
+  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="weather-app">
+    <article class="weather-card">
+      
+      <section class="weather-card__current">
+        <div class="weather-card__header">
+          <div class="weather-card__meta">
+            <h1 class="weather-card__city">New York, NY</h1>
+            <p class="weather-card__date">Tuesday, April 15th</p>
+            <p class="weather-card__condition">Overcast</p>
+          </div>
+          <div class="weather-card__temp-box">
+            <span class="weather-card__temp">58°</span>
+          </div>
+        </div>
+
+        <ul class="weather-card__details">
+          <li class="weather-card__detail-item">
+            <span class="weather-card__label">Precipitation:</span>
+            <span class="weather-card__value">100%</span>
+          </li>
+          <li class="weather-card__detail-item">
+            <span class="weather-card__label">Humidity:</span>
+            <span class="weather-card__value">97%</span>
+          </li>
+          <li class="weather-card__detail-item">
+            <span class="weather-card__label">Wind:</span>
+            <span class="weather-card__value">4 mph SW</span>
+          </li>
+          <li class="weather-card__detail-item">
+            <span class="weather-card__label">Pollen Count:</span>
+            <span class="weather-card__value">36</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="weather-card__forecast">
+        <ul class="forecast-list">
+          
+          <li class="forecast-list__item">
+            <span class="forecast-list__day">Today</span>
+            <div class="forecast-list__temps">
+              <span class="forecast-list__temp forecast-list__temp--high">68°</span>
+              <span class="forecast-list__temp forecast-list__temp--low">36°</span>
+            </div>
+            <span class="forecast-list__pollen">Pollen 36</span>
+          </li>
+
+          <li class="forecast-list__item">
+            <span class="forecast-list__day">Wednesday</span>
+            <div class="forecast-list__temps">
+              <span class="forecast-list__temp forecast-list__temp--high">50°</span>
+              <span class="forecast-list__temp forecast-list__temp--low">39°</span>
+            </div>
+            <span class="forecast-list__pollen">Pollen 36</span>
+          </li>
+
+          <li class="forecast-list__item">
+            <span class="forecast-list__day">Thursday</span>
+            <div class="forecast-list__temps">
+              <span class="forecast-list__temp forecast-list__temp--high">55°</span>
+              <span class="forecast-list__temp forecast-list__temp--low">39°</span>
+            </div>
+            <span class="forecast-list__pollen">Pollen 36</span>
+          </li>
+
+          <li class="forecast-list__item">
+            <span class="forecast-list__day">Friday</span>
+            <div class="forecast-list__temps">
+              <span class="forecast-list__temp forecast-list__temp--high">54°</span>
+              <span class="forecast-list__temp forecast-list__temp--low">43°</span>
+            </div>
+            <span class="forecast-list__pollen">Pollen 36</span>
+          </li>
+
+          <li class="forecast-list__item">
+            <span class="forecast-list__day">Saturday</span>
+            <div class="forecast-list__temps">
+              <span class="forecast-list__temp forecast-list__temp--high">64°</span>
+              <span class="forecast-list__temp forecast-list__temp--low">46°</span>
+            </div>
+            <span class="forecast-list__pollen">Pollen 36</span>
+          </li>
+
+          <li class="forecast-list__item">
+            <span class="forecast-list__day">Sunday</span>
+            <div class="forecast-list__temps">
+              <span class="forecast-list__temp forecast-list__temp--high">64°</span>
+              <span class="forecast-list__temp forecast-list__temp--low">50°</span>
+            </div>
+            <span class="forecast-list__pollen">Pollen 36</span>
+          </li>
+
+          <li class="forecast-list__item">
+            <span class="forecast-list__day">Monday</span>
+            <div class="forecast-list__temps">
+              <span class="forecast-list__temp forecast-list__temp--high">61°</span>
+              <span class="forecast-list__temp forecast-list__temp--low">50°</span>
+            </div>
+            <span class="forecast-list__pollen">Pollen 36</span>
+          </li>
+
+        </ul>
+      </section>
+
+    </article>
+  </main>
+
+</body>
+</html>
