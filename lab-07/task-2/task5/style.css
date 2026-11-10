@@ -6,7 +6,6 @@
   padding: 10px;
 }
 
-/* Colours for each box */
 .box1 { background: #1abc9c; }
 .box2 { background: #3498db; }
 .box3 { background: #9b59b6; }
@@ -18,7 +17,6 @@
 .box9 { background: #2ecc71; }
 .box10 { background: #16a085; }
 
-/* We start writing out flexbox here. The above is just page setup */
 .container {
   display: flex;
   justify-content: space-between;
